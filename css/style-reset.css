@@ -1,0 +1,69 @@
+/* Reset CSS
+==================================== */
+*,
+*::after,
+*::before{
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: #fff0;
+}
+html, body,
+header, footer,
+main, section, article, aside,
+menu, nav, a,
+h1, h2, h3, h4, h5, h6, hgroup,
+div, span, p, ol, ul, li,
+strong, b, em, i, u, s, sub, sup,
+address, time, blockquote,
+form, fieldset, label,
+figure, figcaption, hr,
+iframe, embed, audio{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html{
+	font-size: var(--fs);
+	/* scrollbar-width: none; */
+}
+::selection{
+	color: var(--color-bg);
+	background-color: var(--color-text);
+}
+/* ::-webkit-scrollbar{
+	display: none;
+} */
+:focus,
+:focus-visible{
+	outline: none !important;
+}
+:focus::-ms-value{
+	color: inherit;
+	background-color: none;
+}
+::-moz-focus-inner{
+	border: none !important;
+}
+
+/* SVGs
+======================================== */
+svg{
+	overflow: visible;
+}
+
+/* Links
+==================================== */
+a{
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+.desktop a:hover,
+.mobile a:active{
+	text-decoration: underline;
+}

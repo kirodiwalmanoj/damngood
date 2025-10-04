@@ -1,0 +1,60 @@
+/* Module: sections
+======================================== */
+.module-section{
+	display: grid;
+	grid-template-columns: repeat(var(--colX2), 1fr);
+	grid-gap: calc(var(--gap-cols)*2) var(--gap-cols);
+}
+@media(max-width: 1920px){
+	.module-section{
+		grid-template-columns: repeat(var(--col), 1fr);
+	}
+}
+
+/* Title */
+.module-section--title{
+	grid-column: 4 / -1;
+}
+/* .module-section--title.active{
+	color: blue;
+} */
+@media(max-width: 1920px){
+	.module-section--title{
+		grid-column-start: 2;
+	}
+}
+@media(max-width: 1024px){
+	.module-section--title{
+		grid-column-start: 1;
+	}
+}
+
+/* Toggle */
+#toggle-all{
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: max-content;
+	grid-auto-rows: min-content;
+	column-gap: 2ch;
+	align-items: center;
+}
+#toggle-all wrap{
+	width: 0px;
+	height: 0px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid var(--color-text);
+}
+#toggle-all.active wrap{
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid var(--color-text);
+	-webkit-transform: translateY(-3px);
+			  transform: translateY(-3px);
+}
+
+/* Directors */
+.module-section--content{
+	grid-column: 1 / -1;
+	display: grid;
+	grid-auto-rows: min-content;
+}

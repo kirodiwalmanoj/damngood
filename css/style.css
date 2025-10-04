@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* Global
+======================================== */
+@import url("style-reset.css");
+@import url("style_texts.css");
+@import url("style_global.css");
+@import url("style-controllers.css");
+@import url("style-landing.css");
+@import url("style-media.css");
+@import url("style_cookies.css");
+
+/* Navigation
+======================================== */
+@import url("style_nav.css");
+
+/* Modules
+======================================== */
+@import url("style-module--section.css");
+@import url("style-module--directors.css");
+@import url("style-module--videos.css");
+
+/* Cards
+======================================== */
+@import url("style-card--video.css");
+
+/* Project page
+======================================== */
+@import url("style_project.css");
+
+/* About
+======================================== */
+@import url("style_contact.css");
+
+/* Pages
+======================================== */
+@import url("style_privacy-policy.css");
+
+/* Vars
+======================================== */
+:root{
+	--color-bg: white;
+	--color-text: black;
+
+	/*Easing*/
+	--speed: 300ms;
+	--speedx2: calc(var(--speed)*2);
+	--ease: cubic-bezier(0.83, 0, 0.17, 1);
+
+	/*Margins*/
+	--margin-sides: 15px;
+	--margin-top: var(--margin-sides);
+	--gap-cols: var(--margin-sides);
+	--gap-rows: calc(var(--margin-sides)*3);
+	--gap-small: 5px;
+
+	/*Elements*/
+	--height-text: calc(var(--fs)*var(--lh));
+	--height-rule: calc(var(--height-text)/2);
+
+	/*Cols*/
+	--col: 7;
+	--colX2: calc(var(--col)*2);
+}
+@media (max-width: 1920px){
+	:root{
+		--col: 5;
+	}
+}
+@media (max-width: 1024px){
+	:root{
+		--col: 3;
+	}
+}
+@media (max-width: 768px){
+	:root{
+		--col: 2;
+	}
+}
+@media (max-width: 500px){
+	:root{
+		--col: 1;
+	}
+}

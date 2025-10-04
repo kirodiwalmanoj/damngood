@@ -1,0 +1,33 @@
+/* Media
+======================================== */
+video.no-autoplay{
+	pointer-events: none;
+}
+
+/* Thumbs
+======================================== */
+.thumb{
+	width: 100%;
+	height: auto;
+	display: block;
+	/* object-fit: contain; */
+	font-size: 0;
+	line-height: 0;
+	-webkit-user-select: none;
+		-moz-user-select: none;
+		 -ms-user-select: none;
+			  user-select: none;
+	opacity: 1;
+	-webkit-transition: opacity var(--speedx2) linear;
+			  transition: opacity var(--speedx2) linear;
+	/* -webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		 -ms-transform: translate3d(0, 0, 0);
+			  transform: translate3d(0, 0, 0); */
+}
+
+/* Lazy
+======================================== */
+.lazy{
+	opacity: 0;
+}

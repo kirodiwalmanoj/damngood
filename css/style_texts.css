@@ -1,0 +1,17 @@
+/* Fonts
+==================================== */
+@font-face{
+	font-family: 'OCRF';
+	src: url('../fonts/ocrf-prod-co.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+/* Vars
+==================================== */
+:root{
+	--font: 'OCRF', Courier, monospace;
+	--fs: 13px;
+	--lh: calc(18/13);
+}

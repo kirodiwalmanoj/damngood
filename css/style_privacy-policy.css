@@ -1,0 +1,37 @@
+/* Privacy Policy
+==================================== */
+#privacy-policy_content{
+	max-width: 600px;
+	width: 100%;
+	margin: auto;
+}
+#privacy-policy_content > *:not(:last-child){
+	margin-bottom: var(--height-text);
+}
+#privacy-policy_content > div:first-child{
+	margin-bottom: var(--gap-rows);
+	text-align: center;
+}
+table{
+	border-collapse: collapse !important;
+	width: 100% !important;
+	height: auto !important;
+	border-color: var(--color-text) !important;
+	background-color: var(--color-bg) !important;
+}
+table, th, td {
+	border: 1px solid !important;
+}
+td{
+	padding: 10px !important;
+	text-align: left !important;
+}
+.page-privacy-policy strong{
+	font-weight: 700;
+}
+@media (max-width: 768px){
+	td{
+		width: fit-content !important;
+		width: -moz-fit-content !important;
+	}
+}

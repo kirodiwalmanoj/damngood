@@ -1,0 +1,29 @@
+/* Card: video
+======================================== */
+.module-project{
+	display: grid;
+	grid-auto-rows: min-content;
+	row-gap: var(--gap-small);
+}
+.module-project_link{
+	position: relative;
+	width: auto;
+	padding-top: 58.82%;
+	display: block;
+}
+.module-project_link .thumb{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	object-fit: cover;
+}
+.module-project_info > *:first-child:not(.module-project_info-title){
+	text-transform: uppercase;
+}
+.desktop .module-project_link:hover + .module-project_info .module-project_info-title,
+.mobile .module-project_link:active + .module-project_info .module-project_info-title{
+	text-decoration: underline;
+}

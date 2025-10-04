@@ -1,0 +1,20 @@
+/* Triggers
+======================================== */
+.trigger{
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	text-transform: uppercase;
+	-webkit-user-select: none;
+		-moz-user-select: none;
+		 -ms-user-select: none;
+			  user-select: none;
+	cursor: pointer;
+}
+/* .trigger.active,
+.desktop .trigger:hover{
+	color: var(--color-txt--highlight);
+} */
+.trigger > *{
+	pointer-events: none !important;
+}

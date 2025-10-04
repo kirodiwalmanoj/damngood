@@ -1,0 +1,108 @@
+/* Project
+==================================== */
+.page-project main{
+	padding: calc(var(--margin-top) - var(--gap-small)) var(--margin-sides) calc(var(--gap-rows)*2);
+	display: grid;
+	grid-auto-rows: min-content;
+	row-gap: var(--gap-rows);
+}
+#project-container{
+	width: 100%;
+	max-width: 1180px;
+	display: grid;
+	grid-auto-rows: min-content;
+	row-gap: var(--gap-rows);
+	justify-self: center;
+}
+#project-videos{
+	display: grid;
+	grid-auto-rows: min-content;
+	row-gap: var(--gap-rows);
+}
+@media (min-width: 1367px){
+	#project-container{
+		margin-top: calc(var(--gap-rows) + var(--height-text));
+	}
+}
+
+/*Single Bar*/
+#single-bar{
+	display: grid;
+	color: white;
+	mix-blend-mode: difference;
+	pointer-events: none;
+	z-index: 9;
+}
+#single-bar > *{
+	pointer-events: all;
+	-webkit-user-select: none;
+		-moz-user-select: none;
+		 -ms-user-select: none;
+			  user-select: none;
+}
+.desktop #single-bar > *:hover,
+.mobile #single-bar > *:active{
+	text-decoration: none;
+}
+@media (min-width: 1367px){
+	#single-bar{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: calc(var(--margin-top) - var(--gap-small)) 0;
+		grid-template-columns: 1fr 1180px 1fr;
+	}
+	#prev,
+	#next{
+		align-self: center;
+		justify-self: center;
+		font-family: sans-serif;
+		font-size: 300%;
+		font-weight: 100;
+	}
+	#close{
+		padding-right: var(--margin-sides);
+		grid-area: 1 / 3;
+		align-self: flex-start;
+		justify-self: flex-end;
+	}
+	#next{
+		grid-area: 1 / 3;
+	}
+}
+@media (max-width: 1366px){
+	#single-bar{
+		position: -webkit-sticky;
+		position: sticky;
+		top: calc(var(--margin-top) - var(--gap-small));
+		grid-template-columns: max-content 1fr max-content;
+	}
+	#prev::before,
+	#next::before{
+		content: '[ ';
+	}
+	#prev::after,
+	#next::after{
+		content: ' ]';
+	}
+	#close{
+		justify-self: center;
+	}
+}
+
+/*Thumbnail*/
+/*!!!*/
+.page-project .thumb{
+	width: 100%;
+	max-height: calc(var(--h) - var(--height-text)*2);
+}
+
+/*Credits*/
+@media(min-width: 601px){
+	.project-credits{
+		column-count: 2;
+		column-gap: var(--gap-cols);
+	}
+}

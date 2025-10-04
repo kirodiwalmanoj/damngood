@@ -1,0 +1,56 @@
+/* Landing
+======================================== */
+#landing{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	height: var(--h);
+	padding: var(--margin-sides);
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	-webkit-user-select: none;
+		-moz-user-select: none;
+		 -ms-user-select: none;
+			  user-select: none;
+	background-color: rgba(255, 255, 255, 0.95);
+	cursor: pointer;
+	z-index: 10;
+}
+#landing svg{
+	width: 50vw;
+	max-width: 700px;
+	min-width: 280px;
+	fill: var(--color-text);
+}
+#landing .thumb{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 70vw;
+	max-width: 600px;
+	min-width: 280px;
+	max-height: calc(var(--h) - var(--margin-sides)*2);
+	margin: auto;
+	object-fit: contain;
+}
+@media (min-width: 1025px){
+	.dark-mode #landing{
+		background-color: rgba(0, 0, 0, 0.85);
+	}
+}
+@media (max-width: 414px){
+	#landing svg{
+		width: calc(100vw - var(--margin-sides)*6);
+		min-width: 0;
+	}
+	#landing .thumb{
+		width: calc(100vw - var(--margin-sides)*6);
+		min-width: 0;
+	}
+}
