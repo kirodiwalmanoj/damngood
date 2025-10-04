@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Page with Center Clickable Image</title>
+  <style>
+    
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+       opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    body.fade-out {
+      opacity: 0;
+    }
+    .link-container {
+      text-align: center;
+      margin-top: 100px;
+    }
+    .link-container a {
+      font-size: 24px;
+      text-decoration: none;
+      color: blue;
+    }
+    .image-container {
+      text-align: center;
+    }
+    .image-container img {
+      max-width: 90%;
+      height: auto;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    .image-container img:hover {
+      transform: scale(1.02);
+      border-color: #888;
+    }
+  </style>
+  <script >
+    setTimeout(() => {
+        window.location.href = "creators.html";
+    }, 10000);
+  </script>
+</head>
+<body>
+  <div class="image-container">
+    <a href="creators.html">
+      <img src="./img/main.webp" alt="Clickable Image" />
+    </a>
+  </div>
+</body>
+</html>

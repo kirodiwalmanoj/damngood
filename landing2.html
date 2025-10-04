@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work / Creators / Contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .tabs {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .tabs button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #ddd;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    .tabs button:hover {
+      background-color: #ccc;
+    }
+    .tabs button.active {
+      background-color: #888;
+      color: white;
+    }
+    .content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      background-color: #fafafa;
+    }
+    .content > div {
+      display: none;
+    }
+    .content > div.active {
+      display: block;
+    }
+
+    /* Work grid styles */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .work-item {
+      border: 1px solid #ccc;
+      overflow: hidden;
+      border-radius: 6px;
+      background-color: white;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .work-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .work-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .work-item .info {
+      padding: 10px;
+    }
+    .work-item .info h4 {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+    .work-item .info p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Creators submenu & table styles (as before) */
+    .creators-container {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+    .creators-menu {
+      width: 180px;
+      border: 1px solid #ccc;
+      padding: 0;
+      margin-right: 20px;
+    }
+    .creators-menu li {
+      list-style: none;
+      padding: 0;
+    }
+    .creators-menu li button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #eee;
+      text-align: left;
+      cursor: pointer;
+      border-bottom: 1px solid #ccc;
+      transition: background-color 0.2s;
+    }
+    .creators-menu li button:hover {
+      background-color: #ddd;
+    }
+    .creators-menu li button.active {
+      background-color: #bbb;
+      color: white;
+    }
+    .creators-content > div {
+      display: none;
+    }
+    .creators-content > div.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #888;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabs">
+    <button id="tab1">D1. Work</button>
+    <button id="tab2">D2. Creators</button>
+    <button id="tab3">D3. Contact</button>
+  </div>
+
+  <div class="content">
+    <!-- Work / D1 tab content -->
+    <div id="content1">
+      <h2>Work Portfolio</h2>
+  <div class="work-grid">
+  <div class="work-item" onclick="alert('Clicked Project A')">
+    <div class="work-top">
+      <h4 class="project-title">Project A</h4>
+    </div>
+    <div class="work-image-wrapper">
+      <img src="img/p1.webp" alt="Project A" />
+    </div>
+    <div class="work-bottom">
+      <p class="project-details">Client X | 2025 | Short description</p>
+    </div>
+  </div>
+
+  <div class="work-item" onclick="alert('Clicked Project B')">
+    <div class="work-top">
+      <h4 class="project-title">Project B</h4>
+    </div>
+    <div class="work-image-wrapper">
+      <img src="img/p2.webp" alt="Project B" />
+    </div>
+    <div class="work-bottom">
+      <p class="project-details">Client Y | 2024 | Another short description</p>
+    </div>
+  </div>
+<div class="work-item" onclick="alert('Clicked Project B')">
+    <div class="work-top">
+      <h4 class="project-title">Project B</h4>
+    </div>
+    <div class="work-image-wrapper">
+      <img src="img/p3.webp" alt="Project B" />
+    </div>
+    <div class="work-bottom">
+      <p class="project-details">Client Y | 2024 | Another short description</p>
+    </div>
+  </div>
+  <div class="work-item" onclick="alert('Clicked Project B')">
+    <div class="work-top">
+      <h4 class="project-title">Project B</h4>
+    </div>
+    <div class="work-image-wrapper">
+      <img src="img/p4.webp" alt="Project B" />
+    </div>
+    <div class="work-bottom">
+      <p class="project-details">Client Y | 2024 | Another short description</p>
+    </div>
+  </div>
+  <div class="work-item" onclick="alert('Clicked Project B')">
+    <div class="work-top">
+      <h4 class="project-title">Project B</h4>
+    </div>
+    <div class="work-image-wrapper">
+      <img src="img/p5.webp" alt="Project B" />
+    </div>
+    <div class="work-bottom">
+      <p class="project-details">Client Y | 2024 | Another short description</p>
+    </div>
+  </div>
+
+  <!-- more items -->
+</div>
+
+    </div>
+
+    <!-- Creators / D2 tab content -->
+    <div id="content2">
+      <h2>Creators</h2>
+      <div class="creators-container">
+        <ul class="creators-menu">
+          <li><span id="sub1">Director</span></li>
+          <li><span id="sub2">Creators</span></li>
+          <li><span id="sub3">Artist</span></li>
+        </ul>
+        <div class="creators-content">
+          <div id="subContent1">
+            <h3>Directors List</h3>
+            <table>
+              <thead>
+                <tr><th>DirectorCode</th><th>Name</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>DIR001</td><td>Alice Johnson</td></tr>
+                <tr><td>DIR002</td><td>Bob Smith</td></tr>
+                <tr><td>DIR003</td><td>Carol Lee</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="subContent2">
+            <h3>Creators (subcategory)</h3>
+            <p>Placeholder content for Creators subcategory.</p>
+          </div>
+          <div id="subContent3">
+            <h3>Artist</h3>
+            <p>Placeholder content for Artist subcategory.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact / D3 tab content -->
+    <div id="content3">
+      <h2>Contact</h2>
+      <p>This is placeholder content for Contact.</p>
+    </div>
+  </div>
+
+  <script>
+    // Top tab logic
+    const tabs = { tab1: document.getElementById('tab1'),
+                   tab2: document.getElementById('tab2'),
+                   tab3: document.getElementById('tab3') };
+    const contents = { content1: document.getElementById('content1'),
+                       content2: document.getElementById('content2'),
+                       content3: document.getElementById('content3') };
+
+    function activateTab(tabId, contentId) {
+      for (let t in tabs) tabs[t].classList.remove('active');
+      for (let c in contents) contents[c].classList.remove('active');
+      tabs[tabId].classList.add('active');
+      contents[contentId].classList.add('active');
+    }
+
+    tabs.tab1.addEventListener('click', () => activateTab('tab1', 'content1'));
+    tabs.tab2.addEventListener('click', () => {
+      activateTab('tab2', 'content2');
+      activateSub('sub1', 'subContent1');
+    });
+    tabs.tab3.addEventListener('click', () => activateTab('tab3', 'content3'));
+
+    // Default: show Work
+    activateTab('tab1', 'content1');
+
+    // Sub-menu logic for Creators
+    const subButtons = {
+      sub1: document.getElementById('sub1'),
+      sub2: document.getElementById('sub2'),
+      sub3: document.getElementById('sub3')
+    };
+    const subContents = {
+      subContent1: document.getElementById('subContent1'),
+      subContent2: document.getElementById('subContent2'),
+      subContent3: document.getElementById('subContent3')
+    };
+
+    function activateSub(subId, contentId) {
+      for (let sb in subButtons) subButtons[sb].classList.remove('active');
+      for (let sc in subContents) subContents[sc].classList.remove('active');
+      subButtons[subId].classList.add('active');
+      subContents[contentId].classList.add('active');
+    }
+    subButtons.sub1.addEventListener('click', () => activateSub('sub1', 'subContent1'));
+    subButtons.sub2.addEventListener('click', () => activateSub('sub2', 'subContent2'));
+    subButtons.sub3.addEventListener('click', () => activateSub('sub3', 'subContent3'));
+  </script>
+
+</body>
+</html>

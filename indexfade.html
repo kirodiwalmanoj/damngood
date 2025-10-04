@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fade Out On Navigate</title>
+  <style>
+    body {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    body.fade-out {
+      opacity: 0;
+    }
+    .link-container {
+      text-align: center;
+      margin-top: 100px;
+    }
+    .link-container a {
+      font-size: 24px;
+      text-decoration: none;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="link-container">
+    <a href="otherpage.html" class="fade-link">Go to Other Page (with fade)</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Add fade-in effect when this page loads
+      document.body.style.opacity = 0;
+      requestAnimationFrame(() => {
+        document.body.style.opacity = 1;
+      });
+
+      // Intercept link clicks with class “fade-link”
+      const fadeLinks = document.querySelectorAll('a.fade-link');
+      fadeLinks.forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();  // stop immediate navigation
+          const href = link.getAttribute('href');
+
+          // Add fade-out class
+          document.body.classList.add('fade-out');
+
+          // After the transition ends, navigate
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500);  // match with CSS transition 0.5s
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
